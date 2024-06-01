@@ -1,0 +1,3208 @@
+﻿                                                                  Dia 16/09/2023
+
+                                                                  Imprimindo texto no console
+
+package aula0;
+
+public class Curso {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			System.out.println("Curso de Java foundations");
+			System.out.println("Minha primeira classe com java");
+
+	}
+
+}
+
+
+
+
+                                                                 Dia 23/09/2023
+                                                                   
+                                                                 Exemplo de comentário
+
+package aula3;
+
+/** Exemplo comentário:
+ * Essa classe demonstra a utilização de variavéis em uma classe 
+ * em java*/
+
+public class Comentario {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			int matricula = 1089, idade = 20; // declaração das variáveis do tipo inteiro
+			double dolar = 2.69;
+			/* As linhas seguintes enviam o conteúdo das
+			  variáveis para a tela*/
+			
+			System.out.println("Matricula: " + matricula + "idade: "+idade+"dolar: "+dolar);
+		
+	}
+
+}
+
+
+
+                                                                 Tipos de dados primitivos
+
+package aula3;
+
+public class TiposPrimitivos {
+
+	public static void main(String[] args) {
+		char sexo ='f';
+		byte idade = 89;
+		short codigo = 256;
+		float nota = 9.4f;
+		int alunos = 100, classes = 10;
+		long habitantes = 9050100;
+		double dolar = 4.89;
+		boolean alternativa = false;
+		System.out.println("sexo: " + sexo + "idade: "+idade + "codigo: " + codigo);
+		System.out.println("nota: " + nota + "alunos: " + alunos + "classes: "+ classes);
+		System.out.println("habitantes: " + habitantes + "dolar: "+ dolar + "alternativa: " + alternativa);
+		
+	}
+
+}
+
+
+
+                                                                 Váriavel constante
+
+package aula3;
+
+public class VariavelConstante {
+
+	public static void main(String[] args) {
+		final double PI = 3.14;
+		final int MILISEGUNDOS_POR_SEGUNDO = 1000;
+		final long MILISEGUNDOS_POR_DIA = 24 * 60 * 60 * 1000;
+		
+		System.out.println(PI);
+		System.out.println(MILISEGUNDOS_POR_SEGUNDO);
+		System.out.println(MILISEGUNDOS_POR_DIA);
+		
+	}
+
+}
+
+
+
+
+
+                                                                 Saída de dados
+
+package aula3;
+
+import java.util.Locale;
+
+public class SaidaDeDados {
+
+	public static void main(String[] args) {
+		// Imprimindo um valor decimal
+		double y = 10.34567;
+		System.out.println(y);
+		System.out.printf("%.2f%n", y);
+		System.out.printf("%.4f%n", y);
+		
+		//Alterando de virgula para ponto 		
+		Locale.setDefault(Locale.US);
+		System.out.printf("%.4f%n", y);
+		
+		//Concatenando valores 		
+		System.out.println("RESULTADO: " +y+ "metros");
+		System.out.printf("RESULTADO: %.2f metros%n",y);
+		
+		//Concatenado diferentes variáveis 
+		String nome = "Luiz";
+		int idade = 25;
+		double renda = 2000.0;
+		System.out.printf("%s tem %d anos e ganha R$ %.2f reais%n", nome, idade, renda);
+
+	}
+
+}
+
+
+
+                                                                  Exercício 01
+
+package aula3;
+
+public class Exercicio1 {
+
+	public static void main(String[] args) {
+		String product1 = "Computer";
+		String product2 = "Office desk";
+		
+		int age = 30;
+		int code = 5290;
+		char gender = 'f';
+		
+		double price1 = 2100.0;
+		double price2 = 650.50;
+		double measure = 53.234567;
+		
+		System.out.printf("%s, wich price is $ %.2f %n", product1, price1);
+		System.out.printf("%s, wich price is %.2f %n%n",product2, price2);
+		
+		System.out.printf("Record: %d years old, code %d and gender: %c %n%n", age, code, gender);
+		
+		System.out.printf("Measure with eight decimal places: %.8f %n", measure);
+		System.out.printf("Rouded (three decimal places): %.3f %n", measure);
+		System.out.printf("US decimal point: %.3f ", measure);
+		
+		
+
+	}
+
+}
+
+
+
+
+                                                                   Dia 30/09/2023
+
+                                                                   Processamento de dados
+
+package aula3
+
+public class processamentoDeDadosExemplo1 {
+
+        public static void main(String[] args) {
+
+                int x, y;
+
+                x = 5;
+                y = 2* x;
+                System.out.println(x);
+                System.out.println(y);
+
+       }
+}
+
+package aula3
+
+public class processamentoDeDadosExemplo2 {
+
+        public static void main(String[] args) {
+
+                int x, 
+                double y;
+
+                x = 5;
+                y = 2* x;
+                System.out.println(x);
+                System.out.println(y);
+
+       }
+}
+
+package aula3
+
+public class processamentoDeDadosExemplo1 {
+
+        public static void main(String[] args) {
+
+                double b, B, h, area;
+                b = 6.0;
+                B = 8.0;
+                h = 5.0;
+                area = (b + B) / 2.0 * h;
+                System.out.println(area);
+
+       }
+}
+
+
+
+                                                                   Entrada com DataInputScream
+
+package aula3
+
+public class EntradaComDataInputScream {
+
+        public static void main(String[] args) throws IOExpection {
+
+                String s;
+                float largura, comprimento, area, perimetro;
+                DataInputScream dado;
+                
+                System.out.println("Entre com o comprimento: ");
+                dado = new DataInputScream(System.in);
+                s = dado.readline(); //deprecated
+                comprimento = Float.parseFloat(s);
+
+                System.out.println("Entre com a largura: ");
+                dado = new DataInputScream(System.in);
+                s = dado.readline(); //deprecated
+                largura = Float.parseFloat(s);
+
+                area = largura * comprimento;
+                perimetro = comprimento * 2 + largura * 2;
+               
+                System.out.println("Área do retângulo: " + area);
+                System.out.println("Perímetro do retângulo: " + perimetro);
+
+       }
+}
+
+
+
+
+	                                                           Exercício 04
+
+package aula3;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio04 {
+
+	public static void main(String[] args) {
+		
+		//Variaveis utilizadas
+		String aux;
+		float valorVenal, valorNegociado, percentualImposto, valorImposto;
+		
+		//Captura de dados 
+		aux = JOptionPane.showInputDialog("Entre com o valor venal: ");
+		valorVenal = Float.parseFloat(aux);
+		
+		aux = JOptionPane.showInputDialog("Entre com o valor negociado: ");
+		valorNegociado = Float.parseFloat(aux);
+		
+		aux = JOptionPane.showInputDialog("Entre com o percentual do imposto: ");
+		percentualImposto = Float.parseFloat(aux);
+		
+		
+		//Calculo do valor do Imposto
+		if (valorVenal > valorNegociado) {
+			valorImposto = valorVenal * percentualImposto/100;
+		} else {
+			valorImposto = valorNegociado * percentualImposto/100;		
+		}
+		JOptionPane.showMessageDialog(null, "Valor do Imposto: " + valorImposto);
+	
+	}
+
+}
+
+
+
+
+	                                                         Exercício 05
+
+package aula3;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio05 {
+
+	public static void main(String[] args) {
+		
+		//Variaveis
+		String aux;
+		float prova1, prova2, trabalho, notaFinal; 
+
+		//Captura de Dados
+		aux = JOptionPane.showInputDialog("Nota da prova 1: ");
+		prova1 = Float.parseFloat(aux);
+		
+		aux = JOptionPane.showInputDialog("Nota da Prova 2: ");
+		prova2 = Float.parseFloat(aux);
+		
+		aux = JOptionPane.showInputDialog("Nota do trabalho: ");
+		trabalho = Float.parseFloat(aux);
+		
+		//Calculando a média final
+		
+		notaFinal = (prova1 + prova2+ trabalho) / 3;
+		
+		if (notaFinal >= 6) {
+			JOptionPane.showMessageDialog(null, "Nota Final: " + notaFinal + " Aprovado");
+		} else {
+			JOptionPane.showMessageDialog(null, "Nota Final: " + notaFinal + " Reprovado");
+		}
+	}
+
+}
+
+
+
+	                                                         Exercício 06
+
+package aula3;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio06 {
+
+	public static void main(String[] args) {
+		
+		//Variaveis
+		String aux;
+		int idade, tempoDeContribuicao; 
+		boolean elegibilidadeAposentadoria = false;
+		char sexo;
+		
+		//Captura de dados
+		aux = JOptionPane.showInputDialog("Idade: ");
+		idade = Integer.parseInt(aux);
+		
+		aux = JOptionPane.showInputDialog("Tempo de contribuição: ");
+		tempoDeContribuicao = Integer.parseInt(aux);
+		
+		aux = JOptionPane.showInputDialog("Sexo: ");
+		sexo = aux.charAt(0);
+		
+		//Verificando a situação da aposentadoria
+		if (sexo == 'f' || sexo == 'F') {
+			
+			if (idade >= 60 && tempoDeContribuicao >= 30) {
+				elegibilidadeAposentadoria = true;
+			} else {
+				JOptionPane.showMessageDialog(null, "Faltam " + (60 - idade) + " anos de idade para aposentar-se\n" 
+						+ "Faltam " + (30 - tempoDeContribuicao) 
+						+ " anos de contribuição para aposentar-se");
+			}
+			
+		} 
+		
+		if (sexo == 'm' || sexo == 'M') {
+			
+			if (idade >= 65 && tempoDeContribuicao >= 35) {
+				elegibilidadeAposentadoria = true;
+			} else {
+				JOptionPane.showMessageDialog(null, "Faltam " + (65 - idade) + " anos de idade para aposentar-se\n"
+						+ "Faltam " + (35 - tempoDeContribuicao) 
+						+ " anos de contribuição para aposentar-se");
+		    }
+			
+		}
+		
+		if (elegibilidadeAposentadoria == true) {
+			JOptionPane.showMessageDialog(null, "Você já tem direito a aposentadoria");
+		}
+		
+	}
+
+}
+
+
+
+
+	                                                          Exercício 07
+
+package aula3;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio07 {
+
+	public static void main(String[] args) {
+		
+		//Variaveis
+		String aux;
+		float valorTotal;
+		double gorjeta = 0; 
+		
+		//Captura de dados
+		aux = JOptionPane.showInputDialog("Insira o valor total da conta: ");
+		valorTotal = Float.parseFloat(aux);
+		
+		aux = JOptionPane.showInputDialog("Avalie nosso serviço:\n"
+				+ "1 - Excelente \n " 
+				+ "2 - Bom \n"
+				+"3 - Regular \n");
+		
+		int opcao = Integer.parseInt(aux);
+		
+		//Calculo da gorjeta do garçom
+		
+		if (opcao == 1) {
+			gorjeta = 0.2;
+		} else if (opcao == 2) {
+			gorjeta = 0.15;
+		} else if (opcao == 3 ) {
+			gorjeta = 0.1;
+		}
+		double gorjetinha = valorTotal * gorjeta; 
+		JOptionPane.showMessageDialog(null, "O valor da gorjeta é de: " + gorjetinha);
+	}
+
+}
+
+
+                                                              Dia 07/10/2023
+
+
+
+	                                                      Operadores Aritméticos
+
+package aula4;
+
+public class OperadoresAritméticos {
+
+	public static void main(String[] args) {
+		// Declaração e inicialização das variaveis
+		int x = 10;
+		int y = 3;
+		
+		//Operações diversas com as variaveis
+		System.out.println("x = " + x);
+		System.out.println("y = " + y);
+		
+		System.out.println("-x = " + (-x));
+		
+		System.out.println("x*y = " + (x * y));
+		System.out.println("x/y = " + (x / y));
+		
+		System.out.println("Resto de x por y = " + (x % y));
+		System.out.println("Inteiro de x por y = " + (int) (x % y));
+		
+		System.out.println("x + 1 = " + (int) (++x));
+		System.out.println("y - 1 = " + (int) (--y));
+	
+	}
+
+}
+
+
+
+	                                                      If / Else
+
+package aula4;
+
+import java.util.Scanner;
+
+public class ExemploIfElse {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		int numeroSecreto = 42;
+		
+		System.out.println("Bem-vindo ao Jogo da Advinhação!");
+		System.out.println("Tente advinhar o número secreto (entre 1 e 100): ");
+		int palpite = scanner.nextInt();
+		
+		if(palpite == numeroSecreto) {
+			System.out.println("Parabéns! Você acertou!");
+		} else {
+			System.out.println("Oops, você errou. O número secreto era " + numeroSecreto + ".");
+		}
+
+		scanner.close();
+	}
+
+}
+
+
+
+                                                            If encadeado
+
+package aula4;
+
+import javax.swing.JOptionPane;
+
+public class IfEncadeado {
+
+	public static void main(String[] args) {
+		String mes = JOptionPane.showInputDialog("Froneça o número do mês: ");
+		int aux = Integer.parseInt(mes);
+		if (aux == 1) {
+			mes = "Janeiro";
+		} else if (aux == 2) {
+			mes = "Fvereiro";
+		} else if (aux == 3) {
+			mes = "Março";
+		} else if (aux == 4) {
+			mes = "Abril";
+		} else if (aux == 5) {
+			mes = "Maio";
+		} else if (aux == 6) {
+			mes = "Junho";
+		} else if (aux == 7) {
+			mes = "Julho";
+		} else if (aux == 8) {
+			mes = "Agosto";
+		} else if (aux == 9) {
+			mes = "Setembro";
+		} else if (aux == 10) {
+			mes = "Outubro";
+		} else if (aux == 11) {
+			mes = "Novembro";
+		} else if (aux == 12) {
+			mes = "Dezembro";
+		} else {
+			mes = "Esse mês não existe";
+		}
+		JOptionPane.showMessageDialog(null, mes);
+		System.exit(0);
+
+	}
+
+}
+
+
+
+                                                              Switch case 
+
+package aula4;
+
+import javax.swing.JOptionPane;
+
+public class SwitchCase {
+
+	public static void main(String[] args) {
+		String mes = JOptionPane.showInputDialog("Forneça o número do mês: ");
+		
+		if (mes != null) {
+			switch (mes) {
+			case "1": 
+				mes = "Janeiro";
+				break;
+			case "2":
+				mes = "Fevereiro";
+				break;
+			case "3":
+				mes = "Março";
+				break;
+			case "4":
+				mes = "Abril";
+				break;
+			case "5":
+				mes = "Maio";
+				break;
+			case "6":
+				mes = "Junho";
+				break;
+			case "7":
+				mes = "Julho";
+				break;
+			case "8":
+				mes = "Agosto";
+				break;
+			case "9":
+				mes = "Setembro";
+				break;
+			case "10":
+				mes = "Outubro";
+				break;
+			case "11":
+				mes = "Novembro";
+			case "12":
+				mes = "Dezembro";
+				break;
+				
+			default: 
+					mes = "Mes desconhecido";
+			}
+			JOptionPane.showMessageDialog(null, mes);
+			
+	}
+		System.exit(0);
+	}
+}
+
+
+
+                                                                Exercício 01
+
+package aula4;
+
+import java.util.Scanner;
+
+public class Exercicio01 {
+
+	public static void main(String[] args) {
+		Scanner sc;
+		int idade;
+		
+		System.out.print("Entre com sua idade: ");
+		sc = new Scanner(System.in);
+		idade = sc.nextInt();
+		
+		if (idade >= 18) {
+			System.out.print("Maior de idade");
+		} else {
+			System.out.print("Menor de idade");
+		}
+		sc.close();
+
+	}
+
+}
+
+
+
+                                                            	Exercício 02
+
+package aula4;
+
+import java.util.Scanner;
+
+class Exercicio02 {
+
+	public static void main(String[] args) {
+		Scanner sc;
+		float numero;
+		
+		System.out.print("Entre com um número: ");
+		sc = new Scanner(System.in);
+		numero = sc.nextFloat();
+		
+		if (numero > 0) {
+			System.out.print("Número positivo (+)");
+		} else if (numero == 0) {
+			System.out.print("Número neutro");
+		} else {
+			System.out.print("Número negativo (-)");
+		}
+		sc.close();
+	}
+
+}
+
+
+
+                                                                Exercício 03
+
+package aula4;
+
+import java.util.Scanner;
+
+public class Exercicio03 {
+
+	public static void main(String[] args) {
+		Scanner sc;
+		int numero;
+		
+		System.out.print("Entre com um número: ");
+		sc = new Scanner(System.in);
+		numero = sc.nextInt();
+		
+		if (numero % 2 == 0) {
+			System.out.print("Número é par");
+		} else {
+			System.out.print("Número é ímpar");
+		}
+		
+		sc.close();
+	}
+
+}
+
+
+
+
+                                                              Exercício 04
+
+package aula4;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio04 {
+
+	public static void main(String[] args) {
+		String numero = JOptionPane.showInputDialog("Insira um numero: ");
+		
+		
+		if (numero != null)
+			switch (numero) {
+			case "1":
+				numero = "Domingo";
+				break;
+			case "2":
+				numero = "Segunda-Feira";
+				break;
+			case "3":
+				numero = "Terça-feira";
+				break;
+			case "4":
+				numero = "Quarta-feira";
+				break;
+			case "5":
+				numero = "Quinta-feira";
+				break;
+			case "6":
+				numero = "Sexta-feira";
+				break;
+			case "7": 
+				numero = "Sabádo";
+				break;
+				
+			default: 
+				numero = "Dia desconhecido";
+		}
+		JOptionPane.showMessageDialog(null, numero);
+		
+}
+
+}
+
+
+
+                                                            Exercício 05
+
+package aula4;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio05 {
+
+	public static void main(String[] args) {
+		String numero = JOptionPane.showInputDialog("Insira um numero: ");
+		int aux = Integer.parseInt(numero);
+		
+		if (numero != null)
+			switch (aux) {
+			case 1:
+				numero = "Um";
+				break;
+			case 2:
+				numero = "Dois";
+				break;
+			case 3:
+				numero = "Três";
+				break;
+			case 4:
+				numero = "Quatro";
+				break;
+			case 5:
+				numero = "Cinco";
+				break;
+				
+			default: 
+				numero = "Número não compreendido";
+	}
+		JOptionPane.showMessageDialog(null, numero);
+}
+}
+
+
+
+ 	                                                    Exercício 06
+
+package aula4;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio06 {
+
+	public static void main(String[] args) {
+		String produto = JOptionPane.showInputDialog("Insira o nome do produto: ");
+		String aux = JOptionPane.showInputDialog("Insira o valor do produto: ");
+		double valorP = Double.parseDouble(aux);
+		
+		if (valorP < 0) {
+			JOptionPane.showMessageDialog(null, "O valor do produtdo não pode ser negativo");
+		} else {
+			double valorD = 0;
+			if (valorP <50) {
+				valorD = valorP;
+			} else if (valorP >= 50 && valorP <200) {
+				valorD = valorP * 0.95;
+			} else if  (valorP >500) {
+				valorD = valorP * 0.94;
+			} else if (valorP <1000) {
+				valorD = valorP * 0.93;
+			} else if (valorP >= 1000) {
+				valorD = valorP * 0.92;
+			}
+			JOptionPane.showMessageDialog(null, "Nome do produto: " + produto +
+			"\nValor original: R$ " + valorP +
+			"\nValor com desconto: R$ " + valorD);
+		}
+		
+	}
+
+}
+
+
+
+
+                                                            Classe String
+package aula4;
+
+public class ClasseString {
+
+	public static void main(String[] args) {
+		String frase = "Aprendendo Java";
+		String frasePeloConstrutor = new String("Aprendendo Java");
+		
+		//Para tudo ficar minusculo
+		String minusculo = frase.toLowerCase();
+		System.out.println("minusculo: " + minusculo);
+		
+		//Para tudo converter em maiusculo
+		String maiusculo = frase.toUpperCase();
+		System.out.println("maiusculo: " + maiusculo);
+		
+		
+		//Lê a quantidade de caracteres
+		Integer quantidadeDeCaracteres = frase.length();
+		System.out.println(quantidadeDeCaracteres);
+		
+		
+		//Retorna caracteres especificos
+		System.out.println(frase.charAt(0));
+		System.out.println(frase.charAt(5));
+		System.out.println(frase.charAt(11));
+		
+		//Retorna uma cópia de caracteres
+		System.out.println(frase.substring(11));
+		System.out.println(frase.substring(0, 10));
+		System.out.println(frase.substring(5, 10));
+		
+		//Remove todos os espaços em branco que aparecem no inicio e fim de frase (exceto entre palavras)
+		String frase2 = " Aprendendo Java ";
+		System.out.println(frase2);
+		System.out.println(frase2.trim());
+		
+		//Substitui caracteres (precisa informar quais sao os caracteres)
+		String frase3 = frase.replace("Aprendendo", "Capacitando em");
+		System.out.println(frase3);
+		System.out.println(frase3.replace("a", "i"));
+		
+		//Converte diversos tipos de dados em strings
+		int a = 1000;
+		long b = 500;
+		float c = 20.45f;
+		double d = 15.432;
+ 		String x = String.valueOf(a) + " " + String.valueOf(b) + " " + String.valueOf(c) + " " + String.valueOf(d) + " ";
+ 		System.out.println(x);
+ 		
+ 		//Encontra a posição dos caracteres ou substrings
+ 		String frase4 = "abcdefghij";
+ 		int indice1 = frase4.indexOf("e");
+ 		int indice2 = frase4.indexOf("z");
+ 		System.out.println(indice1);
+ 		System.out.println(indice2);
+ 		
+ 		//Encontra a posição da ultima ocorrencia de uma substring
+ 		String frase5 = "Aprenda Java, Java é divertido";
+ 		int posicao = frase5.lastIndexOf("Java");
+ 		System.out.println("A última ocorrência da da palavra 'Java' está na posição: " + posicao);
+ 		
+ 		//Verifica se uma sequencia de caracteres está dentro de outra string maior
+ 		System.out.println(frase.contains("Aprendendo"));
+ 		System.out.println(frase.contains("Poeta"));
+	}
+
+}
+
+
+
+
+                                                        Exercício 07
+
+package aula4;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio07 {
+
+	public static void main(String[] args) {
+		String input = JOptionPane.showInputDialog("Insira uma string: ");
+		
+		int length = input.length();
+		
+		JOptionPane.showMessageDialog(null, "O tamanho da string é: " + input);
+	}
+
+}
+
+
+
+
+
+                                                        Exercício 08
+
+package aula4;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio08 {
+
+	public static void main(String[] args) {
+		String input = JOptionPane.showInputDialog("Insira uma string ");
+		
+		String maiusculo = input.toUpperCase();
+		System.out.println("maiusculo: " + maiusculo);
+		
+		String minusculo = input.toLowerCase();
+		System.out.println("minusculo: " + minusculo);
+
+		JOptionPane.showMessageDialog(null, "Maiusculo: " + maiusculo);
+		JOptionPane.showMessageDialog(null, "Minusculo: " + minusculo);
+
+
+	}
+
+}
+
+
+
+                                                         Exercício 09
+
+package aula4;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio09 {
+
+	public static void main(String[] args) {
+		String input = JOptionPane.showInputDialog("Insira uma string: ");
+		String input2 = JOptionPane.showInputDialog("Insira uma nova string ");
+		
+		if(input.contains(input2)) {
+			JOptionPane.showMessageDialog(null, "A segunda string ocorre na primeira");
+		} else {
+			JOptionPane.showMessageDialog(null, "A segunda string não ocorre na primeira");
+		}
+		
+	}
+
+}
+
+
+
+
+                                                        Exercício 10
+
+package aula4;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio10 {
+
+	public static void main(String[] args) {
+		String frase = JOptionPane.showInputDialog("Pesquisar: ");
+		
+		if(frase.toLowerCase().contains("basquete") || frase.toLowerCase().contains ("futebol")) {
+			JOptionPane.showMessageDialog(null, "Conteúdo impróprio");
+		} else {
+			JOptionPane.showMessageDialog(null, "Conteúdo liberado");
+		}
+			
+		
+		
+		
+	}
+
+}
+=
+
+
+    
+                                                      Exercício 12
+
+package aula4;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio12 {
+
+	public static void main(String[] args) {
+		//Recuperar o e-mail do usuário
+		String email = JOptionPane.showInputDialog("Insira o seu e-mail: ");
+		
+		//Realizar a validação do e-mail
+		int posicaoUltimoPonto = email.lastIndexOf(".");
+		boolean emailEhValido = email.contains ("@")
+				&& email.charAt(email.lastIndexOf("@") + 1) != '.'
+				&&posicaoUltimoPonto > (email.lastIndexOf("@") + 1)
+				&&posicaoUltimoPonto != (email.length() - 1);
+				
+		//Exibir o resultado da validação
+		if (emailEhValido) {
+			JOptionPane.showMessageDialog(null, "E-mail valido");
+		} else {
+			JOptionPane.showMessageDialog(null, "E-mail inválido");
+		}
+	}
+
+}
+
+
+
+
+                                                    Dia 21/10/2023
+
+
+                                                    Conversão de tipos de dados
+
+package aula05;
+
+public class ConversaoDeTipos {
+
+	public static void main(String[] args) {
+		String s1 = "10";
+		int v = Integer.parseInt(s1);
+		float x = Float.parseFloat(s1);
+		double y = Double.parseDouble(s1);
+		int w = (int) x;
+		int z = (int) y;
+		String s2 = String.valueOf(v);
+		System.out.println(s2 + w + z);
+	}
+
+}
+
+
+
+                                                      Classe Wrapper
+
+
+package aula05;
+
+public class ClasseWrapper {
+
+	public static void main(String[] args) {
+	String stringWrapper = "Meu texto aqui";
+	System.out.println("stringWrapper: " + stringWrapper);
+	
+	Integer integerWrapper = new Integer("40");
+	System.out.println("integerWrapper: " + integerWrapper);
+	Integer integerWrapper2 = new Integer(2800);
+	System.out.println("integerWrapper2: " + integerWrapper2);
+	
+	Short shortWrapper = new Short("40");
+	System.out.println("shortWrapper: " + shortWrapper);
+	
+	Long longWrapper = new Long("934798798798090");
+	System.out.println("longWrapper: " + longWrapper);
+	
+	Byte byteWrapper = new Byte("23");
+	System.out.println("byteWrapper: " + byteWrapper);
+	
+	Float floatWrapper = new Float("500.50");
+	System.out.println("floatWrapper: " + floatWrapper);
+	
+	Double doubleWrapper = new Double("512.22");
+	System.out.println("doubleWrapper: " + doubleWrapper);
+	
+	Character characterWrapper = new Character('a');
+	System.out.println("characterWrapper: " + characterWrapper);
+	
+	Boolean booleanWrapper = new Boolean("true");
+	System.out.println("boleanWrapper: " + booleanWrapper);
+	}
+
+}
+
+
+
+                                                         Classe Wrapper Autoboxing
+
+package aula05;
+
+public class ClasseWrapperAutoboxing {
+
+	public static void main(String[] args) {
+	//Convertendo int em Integer
+		int a = 20;
+		Integer i = Integer.valueOf(a); //Convertendo int em Integer de maneira explícita
+		Integer j = a; //Convertendo int em Integer por meio do autoboxing
+		
+		System.out.println(a +  " " + i + " " + j);
+
+	}
+
+}
+
+
+
+                                                        Classe Wrapper Unboxing
+
+package aula05;
+
+public class ClasseWrapperUnboxing {
+
+	public static void main(String[] args) {
+		//Convertendo Integer to int
+		Integer a = new Integer(3);
+		int i = a.intValue();//Convertendo Integer em int de maneira explícita
+		int j = a;//Unboxing, agora estamos convertendo a classe Integer em uma tipo de int (Internamente= a.intValue())
+
+		System.out.println(a +  " " + i + " " + j);
+	}
+
+}
+
+
+
+
+                                                         Exercicio 01
+
+package aula05;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio01 {
+
+	public static void main(String[] args) {
+		//Recuperar o número
+		String aux = JOptionPane.showInputDialog("Insira um número inteiro: ");
+		
+		//Converter string em Integer (usando Integer.valueOf()
+		Integer numeroInteiro = Integer.valueOf(aux);
+		
+		//Exibir o valor para o usuário
+		JOptionPane.showMessageDialog(null, "Valor: " + numeroInteiro +
+				"\nO nome da classe é: " +  numeroInteiro.getClass().getName());
+	}
+
+}
+
+
+
+
+                                                         Exercicio 02
+
+package aula05;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio02 {
+
+	public static void main(String[] args) {
+		//Usuario insere o número
+		String aux = JOptionPane.showInputDialog("Insira um número decimal: ");
+		
+		//Converter string para double
+		Double numeroDecimal = Double.valueOf(aux);
+		
+	    //Converter double para integer
+		Integer numero = numeroDecimal.intValue();
+		
+		//Imprimir para o usuário
+		JOptionPane.showMessageDialog(null, "Valor: " + numero);
+		
+	}
+
+}
+
+
+
+
+                                                         Exercicio 03
+
+package aula05;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio03 {
+
+	public static void main(String[] args) {
+		//Usuario insere o valor da temperatura
+		String aux = JOptionPane.showInputDialog("Insira a temperatura em Celsius: ");
+		
+		//Converter celsius para fahrenheit
+		Double celsius = Double.valueOf(aux);
+		Double fahrenheit  = (celsius * 9/5) + 32;
+		
+		//Imprimir o resultado para o usuario
+		JOptionPane.showMessageDialog(null, "Temeperatura em Fahrenheit: " + fahrenheit);
+				
+	}
+
+}
+
+
+
+                                                     Arrendondamento para cima
+
+package aula05;
+
+import javax.swing.JOptionPane;
+
+public class ArrendondamentoParaCima {
+
+	public static void main(String[] args) {
+		final float LOTACAO_ONIBUS = 50;
+		
+		int numeroPassageiros = Integer.parseInt(JOptionPane.showInputDialog("Número de passageiros?"));
+		float qtdeOnibus = numeroPassageiros / LOTACAO_ONIBUS;
+		
+		JOptionPane.showMessageDialog(null, "Quantidade de passageiros: " + numeroPassageiros +
+				"\nQuantidade calculada: " + qtdeOnibus + "\nQuantidade de ônibus necessários: " + 
+				(int) Math.ceil(qtdeOnibus));
+		
+		System.exit(0);
+	}
+
+}
+
+
+
+
+                                                    Arrendondamento para baixo
+
+package aula05;
+
+import javax.swing.JOptionPane;
+
+public class AreendondamentoParaBaixo {
+
+	public static void main(String[] args) {
+		float nota = Float.parseFloat(JOptionPane.showInputDialog("Nota da prova: "));
+		JOptionPane.showMessageDialog(null, "Nota origina: " + nota + "\n Arredondada para baixo: " + Math.floor(nota));
+		System.exit(0);
+	}
+
+}
+
+
+
+                                                    Diversos Metodos Math
+
+package aula05;
+
+public class DiversosMetodosMath {
+
+	public static void main(String[] args) {
+	double a = 2.4, b = 2.8, c = 4, d = -1;
+	
+	System.out.println("Arrendondamento de " + a + " = " + Math.round(a));
+	System.out.println("Arrendondamento de " + b + " = " + Math.round(b));
+	System.out.println("Arrendondamento para cima " + b + " = " + Math.ceil(b));
+	System.out.println("Arrendondamento para baixo " + b + " = " + Math.floor(b));
+	System.out.println("Maior valor entre " + a + " e " + b + " = " + Math.max(a, b));
+	System.out.println("Menor valor entre " + a + " e " + b + " = " + Math.min(a, b));
+	System.out.println("O quadrado de " + c + " = " + Math.pow(c, 2));
+	System.out.println("A raiz quadrada de " + c + " = " + Math.sqrt(c));
+	System.out.println("Valor absoluto de " + d + " = " + Math.abs(d));
+	}
+
+}
+
+
+
+                                                      Random Math
+
+package aula05;
+
+public class RandomMath {
+
+	public static void main(String[] args) {
+		//Gera número aleatório de 0 a 1
+		System.out.println(Math.random());
+		
+		//Gera número aleatório de 0 a 9
+		System.out.println((int) (Math.random() * 10));
+		
+		//Gera número aleatório de 0 a 99
+		System.out.println((int) (Math.random() * 100));
+	}
+
+}
+
+
+
+                                                       Exercicio 04
+
+package aula05;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio04 {
+
+	public static void main(String[] args) {
+		//Solicitando número ao usuário
+		String aux = JOptionPane.showInputDialog("Insira um número: ");
+		String aux2 = JOptionPane.showInputDialog("Insira o valor da potênica em que o número será elevado: ");
+		
+		Double numero1 = Double.valueOf(aux);
+		Double numero2 = Double.valueOf(aux2);
+		
+		JOptionPane.showMessageDialog(null, "O resultado é: " + Math.pow(numero1, numero2));
+
+	}
+
+}
+
+
+
+
+                                                        Exercicio 05
+
+package aula05;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio05 {
+
+	public static void main(String[] args) {
+		String aux = JOptionPane.showInputDialog("Insira um número: ");
+		
+		Double numeroInteiro = Double.valueOf(aux);
+		
+		JOptionPane.showMessageDialog(null, "A raiz quadrada de " + numeroInteiro + " é: " + Math.sqrt(numeroInteiro));
+
+	}
+
+}
+
+
+
+                                                         Exercicio 06
+
+package aula05;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio06 {
+
+	public static void main(String[] args) {
+		String aux = JOptionPane.showInputDialog("Insira o primeiro número: ");
+		String aux2 = JOptionPane.showInputDialog("Insira o segundo número: ");
+		
+		Double numero1 = Double.valueOf(aux);
+		Double numero2 = Double.valueOf(aux2);
+		
+		//Usa-se apenas "==" quando são variaveis primitivas, nesse caso o certo é: .equals()
+		if (numero1.equals(numero2)) {
+			JOptionPane.showMessageDialog(null, "Os dois números são iguais");
+		} else {
+			JOptionPane.showMessageDialog(null, "Maior valor entre " + numero1 + " e " + numero2 + " é: " + Math.max(numero1, numero2));
+		}
+
+	}
+
+}
+
+
+
+                                                       Dia 28/10/2023
+
+                                                       Contador Progressivo for
+
+package aula06;
+
+public class ContadorProgressivoFor {
+
+	public static void main(String[] args) {
+		for (int i = 0; i < 10; i++) {
+			System.out.println(i + " ");
+	}
+		System.out.println("\nAcabou!");
+  }
+}
+
+
+
+                                                        Criando um relógio usando for
+
+package aula06;
+
+public class Relogio {
+	
+	public static void main(String[] args) throws InterruptedException {
+		int horas , minutos, segundos;
+		for (horas = 0; horas < 24; horas++) {
+			for (minutos = 0; minutos < 60; minutos++) {
+				for (segundos = 0; segundos < 60; segundos++) {
+					System.out.println(horas + "h" + minutos + "min" + segundos + "s");
+					Thread.sleep(1000);
+					if (segundos == 10) {
+						System.exit(0);
+					}
+				}
+			}
+		}
+		
+		System.exit(0);
+	}
+
+}
+
+
+
+                                                           Exercício 01
+
+package aula06;
+
+public class Exercicio01 {
+
+	public static void main(String[] args) {
+		int numero;
+		for (numero = 0; numero < 11; numero++) {
+			System.out.println(numero + " ");
+		}
+		System.out.println("\n");
+		for (numero = 10; numero > -1; numero--) {
+			System.out.println(numero + " ");
+		}
+
+	}
+
+}
+
+
+
+                                                           Exercício 02
+
+package aula06;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio02 {
+
+	public static void main(String[] args) {
+		String aux;
+		String resultadoFinal = "";
+		int numero;
+		
+		aux = JOptionPane.showInputDialog("Insira a tabuada que deseja saber");
+		int numero2 = Integer.parseInt(aux);
+		
+		
+		for (numero = 1; numero <= 10; numero++) {
+			int resultado = numero2 * numero;
+			String valorTabuada = numero2 + " X " +  numero + " = " + resultado;
+			resultadoFinal = resultadoFinal + valorTabuada + "\n";
+			
+		}
+		JOptionPane.showMessageDialog(null, resultadoFinal);
+
+	}
+
+}
+
+
+
+                                                               Exercício 03
+
+package aula06;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio03 {
+
+	public static void main(String[] args) {
+		String aux = JOptionPane.showInputDialog("Inserir número de notas: ");
+		int qtdn = Integer.parseInt(aux);
+		Double notaTotal = Double.valueOf(0);
+		
+		for (int i = 1; i <= qtdn; i++) {
+			
+			aux = JOptionPane.showInputDialog("Insira a nota " + i + ":");
+			Double nota = Double.valueOf(aux);
+			notaTotal = notaTotal + nota;
+		}
+		
+		Double mediaFinal = notaTotal / qtdn;
+		
+		JOptionPane.showMessageDialog(null, "Média final: " + mediaFinal);
+
+	}
+
+}
+
+
+
+                                                                 Exercício 04
+
+package aula06;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio04 {
+
+	public static void main(String[] args) {
+		String aux = JOptionPane.showInputDialog("Inserir número inteiro e positivo: ");
+		Integer numeroInt = Integer.parseInt(aux);
+		Integer fatorial = 1;
+		
+		if (numeroInt < 0) {
+			JOptionPane.showMessageDialog(null, "Não é possivel fazer o cálculo");
+		} else {
+			
+			for (int i = numeroInt; i >= 1; i--) {
+				fatorial = fatorial * i;					
+		}
+			JOptionPane.showMessageDialog(null, numeroInt + "!= " + fatorial);
+		}
+
+	}
+}
+
+
+
+                                                                   Exercício 05
+
+package aula06;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio05 {
+
+	public static void main(String[] args) {
+		String aux = JOptionPane.showInputDialog("Insira uma frase: ");
+		aux = aux.toLowerCase();
+		int contarVogais = 0;
+
+		for (int i = 0; i < aux.length(); i++) {
+			char letra = aux.charAt(i);
+
+			if (letra == 'a' || letra == 'e' || letra == 'i' 
+					|| letra == 'o' || letra == 'u') {
+				contarVogais++;
+			}
+
+		}
+		JOptionPane.showMessageDialog(null, "Número de vogais: " + contarVogais);
+	}
+
+}
+
+
+
+                                                                   Exercício 06
+
+package aula06;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio06 {
+
+	public static void main(String[] args) {
+		
+		for (int i = 2; i >= 0; i--) {
+			
+			String aux = JOptionPane.showInputDialog("Login: ");
+			String aux2 = JOptionPane.showInputDialog("Senha: ");
+			
+			if (aux.equals("java") && aux2.equals("java")) {
+				JOptionPane.showMessageDialog(null, "Usuário logado");
+				break;
+			} else {
+				if (i == 0) {
+			
+					JOptionPane.showMessageDialog(null, "Esgotou suas tentativas");		
+			} else {
+				JOptionPane.showMessageDialog(null, "Erro ao logar, você tem " + i + " tentativas");
+			}
+		}
+
+		
+		}
+	}
+}
+
+
+
+                                                                     Exercício 07
+
+package aula06;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio07 {
+
+	public static void main(String[] args) {
+		String aux = JOptionPane.showInputDialog("Inserir número inteiro e positivo: ");
+		Integer numeroInt = Integer.parseInt(aux);
+		String mensagem = "";
+		
+		
+		if(numeroInt <= 1000 && numeroInt >= 1) {
+			
+		mensagem = "Números ímpares de 1 até " + numeroInt + ":\n"; 
+		for (int i = 1; i <= numeroInt; i++) {
+			if (i % 2 != 0) {
+		        System.out.println("Valores impares: " + i);
+			} 
+		} 
+		} else {
+			System.out.println("Número inválido");
+		}
+	}
+
+}
+
+
+
+                                                                     Exercício 08
+
+package aula06;
+
+import javax.swing.JOptionPane;
+
+public class Exercicios08 {
+
+	public static void main(String[] args) {
+		String aux = JOptionPane.showInputDialog("Inserira a quantidade de valores inteiros desejada: ");
+		int numeroX = Integer.parseInt(aux);
+	    Integer valorIn = 0;
+	    Integer valorOut = 0;
+		
+		for (int i = 1; i <= numeroX; i++) {
+			aux = JOptionPane.showInputDialog("Insira o valor: " + i);
+			Integer valor = Integer.valueOf(aux);
+			
+			
+			if(valor >= 10 && valor <= 20) {
+				valorIn++;
+			} else {
+				 valorOut++;
+			}
+		}
+		System.out.println("in: " + valorIn + "\nout: " + valorOut);
+	}
+
+}
+
+
+
+                                                                     Exercício 09
+
+package aula06;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio09 {
+
+	public static void main(String[] args) {
+		String aux = JOptionPane.showInputDialog("Inserir número de casos: ");
+		int qtdn = Integer.parseInt(aux);
+	
+		for(int i = 0; i <qtdn; i++) {
+			String aux2 = JOptionPane.showInputDialog("Inserir nota 1: ");
+		    double nota1 =Double.parseDouble(aux2);
+		    
+		    String aux3 = JOptionPane.showInputDialog("Inserir nota 2: ");
+		    double nota2 =Double.parseDouble(aux3);
+		    
+		    String aux4 = JOptionPane.showInputDialog("Inserir nota 3: ");
+		    double nota3 =Double.parseDouble(aux4);
+		    
+		    double media = (nota1 * 2 + nota2 * 3 + nota3 *5) / 10;
+		    
+		    JOptionPane.showMessageDialog(null, "Média ponderada: " + String.format("%.2f", media));
+	}
+		
+ }
+}
+
+
+
+
+                                                                   Dia 11/11/2023
+
+                                                                   Exercício 10
+
+package aula07;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio16 {
+
+	public static void main(String[] args) {
+		String aux = JOptionPane.showInputDialog("Inserir número de casos: ");
+		int qtdn = Integer.parseInt(aux);
+		
+		for(int i = 0; i <qtdn; i++) {
+			String aux2 = JOptionPane.showInputDialog("Inserir número 1: ");
+		    double numero1 =Double.parseDouble(aux2);
+		    
+		    String aux3 = JOptionPane.showInputDialog("Inserir número 2: ");
+		    double numero2 =Double.parseDouble(aux3);
+		    
+		    double math = numero1 / numero2;
+		    
+		    if(numero2 == 0) {
+		    	JOptionPane.showMessageDialog(null, "Divisão impossível de realizar");
+		    } else {
+		    	JOptionPane.showMessageDialog(null, "Resultado: " + math);
+		    }
+		}
+		
+	}
+
+}
+
+
+
+
+                                                                   Exercício 11
+
+package aula07;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio11 {
+
+	public static void main(String[] args) {
+		String aux = JOptionPane.showInputDialog("Inserira um número inteiro: ");
+		int n = Integer.parseInt(aux);
+		
+		String output = "Divisores de " + n + ":\n";
+		
+		for (int i = 1; i <= n ; i++) {
+			 if( n % i == 0) {
+				 output += i + "\n";
+			 }
+		}
+		JOptionPane.showMessageDialog(null, output);
+		
+	}
+		
+}
+
+
+
+
+                                                                   Exercício 12
+
+package aula07;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio12 {
+
+	public static void main(String[] args) {
+		String aux = JOptionPane.showInputDialog("Inserira um número inteiro: ");
+		int n = Integer.parseInt(aux);
+		
+		String output = "Número | Quadrado | Cubo\n";
+		output += "-------------------------------------\n";
+		
+		for (int i = 1; i <= n; i++) {
+			double quadrado = (int) Math.pow(i, 2);
+			double cubo = (int) Math.pow(i, 3);
+			
+			output += i + "              | " + quadrado + "              | " + cubo + "\n";
+			
+		}
+		JOptionPane.showMessageDialog(null, output);
+	}
+
+}
+
+
+
+
+                                                                   
+                                                                   Exercício 13
+
+public class Exercicio13 {
+	public static void main(String[] args) {
+		//Variaveis e solicitação das palavras ao usuário
+		char c;
+		boolean anagrama = true;
+		String aux = JOptionPane.showInputDialog("Inserir palavra: ");
+		String aux2 = JOptionPane.showInputDialog("Inserir outra palavra: ");
+		
+		//Convertendo as strings todas em minusculo
+		aux = aux.toLowerCase().trim();
+		aux2 = aux2.toLowerCase().trim();
+		
+		//Verificando o tamanho das strings
+		if (aux.length() != aux2.length()) {
+			anagrama = false;
+		}
+		
+		//Verificando se as palavras possuem as mesmas letras
+			for (int i = 0; i<aux.length(); i++) {
+				c = aux.charAt(i);
+				if(c != ' ') {
+					if(aux2.indexOf(c) == -1) {
+						anagrama = false;
+						break;
+					}
+				}
+			}
+			for (int i = 0; i<aux2.length(); i++) {
+				c = aux2.charAt(i);
+				if(c != ' ') {
+					if(aux.indexOf(c) == -1) {
+						anagrama = false;
+						break;
+					}	
+		}
+	  }
+			//Imprimindo o resultado ao usuário
+			if (anagrama) {
+				JOptionPane.showMessageDialog(null, "As palavras são anagramas");
+			} else {
+				JOptionPane.showMessageDialog(null, "As palavras não são anagramas");
+			}
+   }
+}
+
+
+
+
+                                                                 Uso do "While"
+
+package aula07;
+
+import javax.swing.JOptionPane;
+
+public class UsoWhile {
+
+	public static void main(String[] args) {
+	int contador = Integer.parseInt(JOptionPane.showInputDialog("Digite a quantidade"));
+	
+	while(contador >= 0) {
+		System.out.println(contador);
+		contador--;
+	}
+	System.out.println("Fim do contador regressivo\n");
+	
+	contador = 0;
+
+	}
+
+}
+
+
+
+
+                                                               Uso do "do While"
+
+package aula07;
+
+import javax.swing.JOptionPane;
+
+public class UsoDoWhile {
+
+	public static void main(String[] args) {
+		int limite = Integer.parseInt(JOptionPane.showInputDialog("Digite a quantidade"));
+		int contador = 0;
+		
+		do {
+			System.out.println(contador);
+			contador++;
+		} while (contador <= limite);
+		System.out.println("Fim do contador progresivo");
+	}
+
+}
+
+
+
+
+                                                                Exercício 01
+
+package aula07;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio01 {
+
+	public static void main(String[] args) {
+		boolean continuar = true;
+		
+		while(continuar) {
+			double numero1 = Double.parseDouble(JOptionPane.showInputDialog("Insira um número: "));
+			double numero2 =Double.parseDouble(JOptionPane.showInputDialog("Insira outro número: "));
+			
+			Integer operacao = Integer.parseInt(JOptionPane.showInputDialog("Escolha a operação:\n " + "1. Adição\n" + "2. Subtração\n" + "3. Multiplicação\n" 
+					+ "4. Divisão\n" + "5. Sair"));
+		
+			switch (operacao) {
+			case 1:
+				JOptionPane.showMessageDialog(null, "Resultado é: " + (numero1 + numero2));
+				break;
+			case 2:
+				JOptionPane.showMessageDialog(null, "Resultado é: " + (numero1 - numero2));
+				break;
+			case 3: 
+				JOptionPane.showMessageDialog(null, "Resultado é: " + (numero1 * numero2));
+				break;
+			case 4:
+				if (numero2 != 0) {
+					JOptionPane.showMessageDialog(null, "Resultado é: " + (numero1 / numero2));
+					break;
+				} else {
+					JOptionPane.showMessageDialog(null, "Erro: divisão por 0");
+				}
+				break;
+				default: 
+					JOptionPane.showMessageDialog(null, "Número inválido, digite um número entre 1 a 5");
+				    break;
+			}
+		}
+
+	}
+
+}
+
+
+
+
+                                                                   Exercício 02 
+
+package aula07;
+
+import java.util.Random;
+import javax.swing.JOptionPane;
+
+public class Exercicio02 {
+
+	public static void main(String[] args) {
+		Random random = new Random();
+		int numeroSecreto = random.nextInt(100) + 1;
+		int palpite;
+		
+		do {
+			palpite = Integer.parseInt(JOptionPane.showInputDialog("Advinhe o número entre 1 a 100: "));
+			
+			if (palpite < numeroSecreto) {
+				JOptionPane.showMessageDialog(null, "Digite um número maior");
+			} else if (palpite > numeroSecreto) {
+				JOptionPane.showMessageDialog(null, "Digite um número menor");
+			}
+		} while (palpite != numeroSecreto);
+		JOptionPane.showMessageDialog(null, "Parábens, você acertou o número " + numeroSecreto);
+		
+	}
+
+}
+
+
+
+
+                                                             Aula dia 18/11/2023
+
+
+                                                             Exercício 03
+
+package aula07;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio03 {
+
+	public static void main(String[] args) {
+		double soma = 0;
+		int contador = 0;
+		
+		while (true) {
+			double nota = Double.parseDouble(JOptionPane.showInputDialog("Digite a nota (0 a 10) ou -1 para sair"));
+			if (nota == -1) {
+				break;
+			}
+			if(nota >= 0 && nota<= 10) {
+				soma+= nota;
+				contador++;
+			} else {
+				JOptionPane.showMessageDialog(null, "Digite uma nota entre 0 e 10");
+			} 
+		}
+		if (contador > 0) {
+			double media = soma/contador;
+			JOptionPane.showMessageDialog(null, "A média é igual a: " + media);
+		} else {
+			JOptionPane.showMessageDialog(null, "Nenhuma nota válida foi digitada");
+		}
+
+	}
+
+}
+
+
+
+                                                             Exercício 04
+
+package aula07;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio04 {
+
+	public static void main(String[] args) {
+		
+		while (true) {
+			double preco = Double.parseDouble(JOptionPane.showInputDialog("Insira o valor do produto ou digite '0' para sair: "));
+			
+			if (preco == 0) {
+				JOptionPane.showMessageDialog(null, "Programa encerrado.");
+				break;
+			}
+			if (preco < 1) {
+				JOptionPane.showMessageDialog(null, "Não é possível calcular o produto.");
+			} else {
+				double precoNovo = preco + (preco * 12/100);
+				JOptionPane.showMessageDialog(null, "O valor do produto, com o acréscimo de 12%, é de: " + Math.round(precoNovo));
+			}
+		}
+
+	}
+
+}
+
+
+
+                                                              Exercício 06
+
+package aula07;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio06 {
+
+	public static void main(String[] args) {
+		
+		while(true) {
+		String senha = JOptionPane.showInputDialog("Digite a senha: ");
+			
+			if (senha.equals("2002")) {
+				JOptionPane.showMessageDialog(null, "Acesso permitido");
+				break;
+			} else {
+				JOptionPane.showMessageDialog(null, "Senha Inválida");
+			}
+		}
+	}
+}
+
+
+
+                                                              Exercício 07
+
+
+import javax.swing.JOptionPane;
+
+public class Exercicio07 {
+
+	public static void main(String[] args) {
+		
+		while(true) {
+			int cx = Integer.parseInt(JOptionPane.showInputDialog("Digite a cordenada 'X': "));
+			
+			if (cx == 0) {
+				JOptionPane.showMessageDialog(null, "Encerrando o programa");
+				break;
+			}
+			
+			int cy = Integer.parseInt(JOptionPane.showInputDialog("Digite a cordenada 'Y': "));
+			
+			if (cx > 0 && cy > 0) {
+				JOptionPane.showMessageDialog(null, "Pertence ao primeiro quadrante");
+			} else if (cx < 0 && cy > 0) {
+				JOptionPane.showMessageDialog(null, "Pertence ao segundo quadrante");
+			} else if (cx < 0 && cy < 0) {
+				JOptionPane.showMessageDialog(null, "Pertence ao terceiro quadrante");
+			} else if (cx > 0 && cy < 0){
+				JOptionPane.showMessageDialog(null, "Pertence ao quarto quadrante");
+			}
+		}
+	}
+}
+
+
+
+                                                             Exercício 08
+
+package aula07;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio08 {
+
+	public static void main(String[] args) {
+		int alcool = 0, gasolina = 0, diesel = 0;
+		
+		while(true) {
+			int opcao = Integer.parseInt(JOptionPane.showInputDialog("Esolha qual produto abastecer (se deseja sair, digite 4):\n"
+					+ "1. Álcool\n" + "2. Gasolina\n" + "3. Diesel\n" + "4. Fim"));
+			
+			if (opcao > 4 || opcao < 1) {
+				JOptionPane.showMessageDialog(null,"Número inválido, tente novamente.");
+			}
+			
+			switch (opcao) {
+			case 1:
+				alcool++;
+				break;
+			case 2:
+				gasolina++;
+				break;
+			case 3:
+				diesel ++;
+				break;
+			}
+			
+			if (opcao == 4) {
+				break;
+			}
+		}
+		JOptionPane.showMessageDialog(null, "MUITO OBRIGADO\n" + "Álcool: " + alcool + " clientes\n" + "Gasolina: " + gasolina
+				+ " clientes\n" + "Diesel: " + diesel + " clientes\n" );
+	}
+}
+
+
+
+                                                           Métodos sem retorno 
+
+package Aula08;
+
+public class MetodosSemRetorno {
+	public static void imprimir() {
+		System.out.println("Aprendendo a linguagem Java");
+	} 
+	
+	public static void imprimirTexto(String texto) {
+		System.out.println(texto);
+	}
+	
+	public static void somar(int a, int b) {
+		System.out.println(a + b);
+	}
+	
+	public static void mostrarQuadrado(int valor) {
+		System.out.println(Math.pow(valor, 2));
+	}
+	
+	public static void mostrarMaior(int a, int b, int c) {
+		System.out.println(Math.max(c, Math.max(a, b)));
+	}
+	
+	public static void mostrarSexoPorExtenso(char sexo) {
+		if(sexo == 'F' || sexo == 'f') {
+			System.out.println("Feminino");
+		} else if (sexo == 'M' || sexo == 'm') {
+			System.out.println("Masculino");
+		} else {
+			System.out.println("Sexo descomhecido");
+		}
+	}
+	
+	public static void main(String args[]) {
+		imprimir();
+		imprimirTexto("Olá Javeiros");
+		mostrarQuadrado(10);
+		somar(10, 20);
+		mostrarMaior(10, 20, 30);
+		mostrarSexoPorExtenso('F');
+	}
+}
+
+
+
+                                                         Métodos com retorno
+
+package Aula08;
+
+public class MetodosComRetorno {
+	public static double somar(double a, double b) {
+		return a + b;
+	}
+	
+	public static String mostrarPares(int valor) {
+		String retorno = "";
+		for (int a = 0; a <= valor; a = a + 2) {
+			retorno += a + " ";
+		}
+		return retorno;
+	}
+	
+	public static int contarLetrasA(String palavra) {
+		int quantidade = 0;
+		palavra = palavra.toUpperCase();
+		for (int a = 0; a <= palavra.length(); a++) {
+			quantidade++;
+		}
+		return quantidade;
+	}
+	
+	public static String mostrarDiaPorExtenso(int dia) {
+		String extenso = "Domingo";
+		if (dia == 2) {
+			extenso = "Segunda-Feira";
+		} else if (dia == 3) {
+			extenso = "Terça-Feira";
+		} else if (dia == 4) {
+			extenso = "Quarta-Feira";
+		} else if (dia == 5) {
+			extenso = "Quinta-Feira";
+		} else if (dia == 6) {
+			extenso = "Sexta";
+		} else if (dia == 7) {
+			extenso = "Sábado";
+		}
+		return extenso;
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(MetodosComRetorno.somar(3, 5));
+		System.out.println(MetodosComRetorno.mostrarPares(100));
+		System.out.println(MetodosComRetorno.mostrarDiaPorExtenso(7));
+		System.out.println(MetodosComRetorno.contarLetrasA("Banana"));
+	}
+}
+
+
+
+                                                             Área com sobrecarga
+
+package Aula08;
+
+public class AreaComSobrecarga {
+	
+	public static double calcularArea(int x) {
+		return (x * x);
+	}
+	
+	public static double calcularArea(int x, int y) {
+		return (x * y);
+	}
+	
+	public static double calcularArea(int x, int y, int z) {
+		return (x * y * z);
+	}
+
+}
+
+
+
+                                                              Entrada de dados
+
+package Aula08;
+
+import javax.swing.JOptionPane;
+
+public class EntradaDeDadosComMetodos {
+	
+	private static String aux = "";
+	
+	public static String lerString(String mensagem) {
+		aux = JOptionPane.showInputDialog(mensagem);
+		return aux;
+	}
+	
+	public static int lerNumeroInt(String mensagem) {
+		aux = JOptionPane.showInputDialog(mensagem);
+		int numeroRecuperado = Integer.parseInt(aux);
+		return numeroRecuperado;
+	}
+	
+	public static double lerNumeroDouble(String mensagem) {
+		aux = JOptionPane.showInputDialog(mensagem);
+		double numeroRecuperado = Double.parseDouble(aux);
+		return numeroRecuperado;
+	}
+}
+
+
+
+
+                                                               Chamando métodos
+
+package Aula08;
+
+import javax.swing.JOptionPane;
+
+public class ChamaMetodos {
+	
+	public static void main(String[] args) {
+		String nome = EntradaDeDadosComMetodos.lerString("Forneça seu nome: ");
+		int idade = EntradaDeDadosComMetodos.lerNumeroInt("Forneça sua idade: ");
+		double altura = EntradaDeDadosComMetodos.lerNumeroDouble("Forneça sua altura: ");
+		
+		JOptionPane.showMessageDialog(null, "Nome: " + nome + "\nidade: " + idade + "\nAltura: " + altura);
+	}
+}
+
+
+
+
+
+                                                               Exercício 01
+Primeira classe script
+
+package Aula08;
+
+public class Mes {
+	public static String getMesPorExtenso(int mes, int idioma) {
+		switch (mes) {
+		case 1: 
+			return idioma == 1 ? "Janeiro" : "January";
+		case 2: 
+			return idioma == 1 ? "Fevereiro" : "February";
+		case 3: 
+			return idioma == 1 ? "Março" : "March";
+		case 4: 
+			return idioma == 1 ? "Abril" : "April";
+		case 5: 
+			return idioma == 1 ? "Maio" : "May";
+		case 6: 
+			return idioma == 1 ? "Junho" : "June";
+		case 7: 
+			return idioma == 1 ? "Julho" : "July";
+		case 8: 
+			return idioma == 1 ? "Agosto" : "August";
+		case 9: 
+			return idioma == 1 ? "Setembro" : "September";
+		case 10: 
+			return idioma == 1 ? "Outubro" : "October";
+		case 11: 
+			return idioma == 1 ? "Novembro" : "November";
+		case 12: 
+			return idioma == 1 ? "Dezembro" : "December";
+			default: 
+				return "Mês desconhecido";
+		}
+		
+	}
+
+}
+
+
+Segunda classe script
+
+package Aula08;
+
+public class usaMesExercicio01 {
+	
+	public static void main(String[] args) {
+		String mes = Mes.getMesPorExtenso(12, 2);
+		System.out.println(mes);
+  }
+}
+
+
+
+                                                               Exercício 02
+Primeira classe script
+
+package Aula08;
+
+public class Data {
+	public static int getDia(String data) {
+		String dia = data.substring(0, 2);
+		return Integer.parseInt(dia);
+	}
+
+	public static int getMes(String data) {
+		String mes = data.substring(3, 5);
+		return Integer.parseInt(mes);
+	}
+
+	public static int getAno(String data) {
+		String ano = data.substring(6, 10);
+		return Integer.parseInt(ano);
+	}
+}
+
+Segunda classe script
+
+package Aula08;
+
+public class testaData {
+
+	public static void main(String[] args) {
+	int dia = Data.getDia("25/11/2023");
+	int mes = Data.getMes("25/11/2023");
+	int ano = Data.getAno("25/11/2023");
+	System.out.println(dia);
+	System.out.println(mes);
+	System.out.println(ano);
+	}
+
+}
+
+
+
+                                                                Exercício 03
+Primeira classe script
+
+package Aula08;
+
+
+public class Senha {
+	public static String gerar() {
+		int qtdmc = 8;
+		
+		String[] caracteres = {
+				
+			"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"
+		};
+		
+		StringBuilder senha = new StringBuilder();
+		
+		for(int i = 0; i < qtdmc; i++) {
+			int posicao = (int) (Math.random() * caracteres.length);
+			senha.append(caracteres[posicao]);
+		}
+		return senha.toString();
+	}
+
+}
+
+Segunda Classe Script
+
+package Aula08;
+
+public class usaSenha {
+
+	public static void main(String[] args) {
+		System.out.println(Senha.gerar());
+	}
+
+}
+
+
+
+
+                                                                Exercício 04
+
+Primeira classe script
+
+package Aula08;
+
+public class Contagem {
+	
+	public static void contar() {
+		int i;
+		for (i = 0; i <=10; i++)
+		System.out.println(i);
+		}
+
+	
+	public static void contar(int fim) {
+		for (int i = 0; i <= fim; i++)
+			System.out.println(i);
+		}
+
+	
+	public static void contar(int inicio, int fim) {
+		for (int i = inicio; i <= fim; i++)
+			System.out.println(i);
+		}
+	}
+
+Segunda classe script 
+
+package Aula08;
+
+public class usaContar {
+
+	public static void main(String[] args) {
+		Contagem.contar();
+		Contagem.contar(10);
+		Contagem.contar(0, 20);
+	}
+}
+
+
+
+                                                               Exercício 05
+
+Primeira classe script
+
+package Aula08;
+
+public class ConversorTemperatura {
+
+	public static double converteTemperatura(double celsius) {
+		Double fahrenheit  = (celsius * 9/5) + 32;
+	return fahrenheit;
+	}
+}
+
+Segunda classe script
+
+package Aula08;
+
+import javax.swing.JOptionPane;
+
+public class usaConversorTemperatura {
+
+	public static void main(String[] args) {
+		String aux = JOptionPane.showInputDialog("Insira a temperatura em Celsius: ");
+		Double celsius = Double.valueOf(aux);
+		JOptionPane.showMessageDialog(null, "Temperatura em Fahrenheit: " + ConversorTemperatura.converteTemperatura(celsius));
+	}
+}
+
+
+
+                                                              Exercício 06
+
+Primeira classe script
+
+package Aula08;
+
+public class Retangulo {
+	
+	public static double areaRetangulo(double largura, double altura) {
+		double area;
+		area = largura * altura;
+		return area;
+	}
+	
+	public static double perimetroRetangulo(double largura, double altura) {
+		double perimetro;
+		perimetro = 2 * (largura + altura);
+		return perimetro;
+	}
+	
+	public static double diagonalRetangulo(double largura, double altura) {
+		double diagonal;
+		diagonal = Math.sqrt(Math.pow(largura, 2) + Math.pow(altura, 2));
+		return diagonal;
+	}
+}
+
+Segunda classe script
+
+package Aula08;
+
+import javax.swing.JOptionPane;
+
+public class usaRetangulo {
+
+	public static void main(String[] args) {
+		String aux = JOptionPane.showInputDialog("Insira o valor da largura: ");
+		Double largura = Double.valueOf(aux);
+		
+		String aux2 = JOptionPane.showInputDialog("Insira o valor da altura: ");
+		Double altura = Double.valueOf(aux2);
+		
+	    JOptionPane.showMessageDialog(null, "Área: " + Retangulo.areaRetangulo(altura, largura) + "\nPerímetro: " + 
+	    Retangulo.perimetroRetangulo(altura, largura) + "\nDiagonal: " + Retangulo.diagonalRetangulo(altura, largura));
+		
+	}
+}
+
+
+
+
+                                                                 Array
+
+package Aula09;
+
+public class MeuPrimeiroArray {
+
+	public static void main(String[] args) {
+		String [] nomes = new String [3];
+		nomes [0] = "Eugenio";
+		nomes [1] = "Haniery";
+		nomes [2] = "Pedro";
+		
+		System.out.println(nomes[0]);
+		System.out.println(nomes[1]);
+		System.out.println(nomes[2]);
+		
+		//loop for
+		for(int i = 0; i < nomes.length; i++) {
+			System.out.println(nomes);
+		}
+		
+		//loop for-each
+		for(String nome : nomes) {
+			System.out.println(nome);
+		}
+	}
+}
+
+
+
+                                                                 Arrays de ordens
+
+package Aula09;
+
+import java.util.Arrays;
+
+public class ArrayOrdens {
+
+	public static void main(String[] args) {
+		String[] nomes = {"Lucas", "Daniel", "Julia", "Tatiana", "Isabella", "Matheus"};
+		Arrays.sort(nomes);
+		System.out.println("Nomes: ");
+		for (String nome : nomes) {
+			System.out.println(nome);
+		}
+		
+		char[] vogais = {'i', 'u', 'a', 'o', 'e'};
+		Arrays.sort(vogais);
+		System.out.println("\nVogais: ");
+		for (char vogal : vogais) {
+			System.out.println(vogal);
+		}
+		
+		int [] numeros = {9, 2, 6, 7, 3, 4, 8, 5, 1, 0};
+		Arrays.sort(numeros);
+		System.out.println("\nNumeros: ");
+		for (int numero : numeros) {
+			System.out.println(numero);
+		}
+		
+		float[] notas = {7.6f, 8.5f, 9.7f, 5.4f, 7.4f};
+		Arrays.sort(notas);
+		System.out.println("\nNotas: ");
+		for (float nota : notas) {
+			System.out.println(nota);
+		}
+		
+		Integer tamanhoArrayNomes = nomes.length;
+		System.out.println("\n" + tamanhoArrayNomes);
+		
+		Integer tamanhoArrayNumeros = numeros.length;
+		System.out.println("\n" + tamanhoArrayNumeros);
+ 
+	}
+
+}
+
+
+
+                                                                Array de pesquisa de cor
+
+package Aula09;
+
+import javax.swing.JOptionPane;
+
+public class ArrayPesquisaCor {
+
+	public static void main(String[] args) {
+		String [] cores = {"Verde", "Amarelo", "Azul", "Vermelho", "Preto"};
+		
+		String cor = JOptionPane.showInputDialog("Forneça uma cor");
+		
+		String mensagem = "Cor não encontrada";
+		
+		for (int i = 0; i < cores.length; i++) {
+			if(cores[i].equalsIgnoreCase(cor)) {
+				mensagem = "Cor encontrada";
+				break;
+			}
+		}
+		
+		JOptionPane.showMessageDialog(null, mensagem);
+	}
+
+}
+
+
+
+                                                                   Array de busca binária
+
+package Aula09;
+
+import java.util.Arrays;
+
+import javax.swing.JOptionPane;
+
+public class ArrayBuscaBinaria {
+
+	public static void main(String[] args) {
+		int [] numeros = new int [1000];
+		
+		for (int i = 0; i < numeros.length; i++) {
+			numeros[i] = (int) (Math.random() * 1000);
+		}
+		
+		int valor = Integer.parseInt(JOptionPane.showInputDialog("Forneça um número: "));
+		
+		String mensagens = "Valor não encontrado";
+		
+		for (int i = 0; i < numeros.length; i++) {
+			if(numeros[i] == valor) {
+				mensagens = "Valor encontrado na posição " + i;
+				break;
+			}
+		}
+		
+		System.out.println(mensagens);
+		
+		Arrays.sort(numeros);
+		int pos = Arrays.binarySearch(numeros, valor);
+		System.out.println("Nova posição ordenada " + pos);
+	}
+
+}
+
+
+
+
+                                                               Dia 09/12/2023
+
+                                                               Exercício 07
+
+package aula10;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio07 {
+
+	public static void main(String[] args) {
+		
+	    int qtde = Integer.parseInt(JOptionPane.showInputDialog("Digite a quantidade de pessoas: "));
+
+	    String [] nomes = new String [qtde];
+		int [] idade = new int [qtde];
+		double [] altura = new double [qtde];
+    	
+		int pessoasMenorDe16 = 0;
+		
+	    for(int i = 0; i <qtde; i++) {
+	    	nomes[i] = JOptionPane.showInputDialog("Digite o nome " + (i + 1)+ " : ");
+	    	
+			idade[i] = Integer.parseInt(JOptionPane.showInputDialog("Digite a idade " + (i + 1)+ " : "));
+			
+			altura[1] = Double.parseDouble(JOptionPane.showInputDialog("Digite a altura " + (i + 1) + " : "));
+			
+			if(idade[i] < 16) {
+			pessoasMenorDe16++;
+			}
+	    }	
+	    
+	    double alturaMedia = calcularAlturaMedia(altura);
+	    double porcentagemMenosDe16 = (pessoasMenorDe16 / (double) qtde) * 100;
+	    
+	    
+	    String mensagem = "Altura média das pessoas: " + String.format("%.2f", alturaMedia) + "\nPorcentagem de pessoas com menos de 16 anos: " 
+		+ String.format("%.2f", porcentagemMenosDe16) + "%\n";
+	       
+	    if(pessoasMenorDe16 > 0) {
+	    	String nomesMenorDe16 = obterNomesMenosDe16(idade, nomes);
+	    	
+	    	mensagem += "Nomes das pessoas menores de 16 anos:\n" + nomesMenorDe16;
+	    }
+	    JOptionPane.showMessageDialog(null, mensagem);
+	}
+
+	private static String obterNomesMenosDe16(int[] idade, String[] nomes) {
+		StringBuilder nomesMenorDe16 = new StringBuilder();
+		
+		for (int i = 0; i < idade.length; i++) {
+			if(idade[i] < 16) {
+				nomesMenorDe16.append(nomes[i]).append("\n");
+			}
+		}
+		return nomesMenorDe16.toString();
+	}
+
+	private static double calcularAlturaMedia(double[] altura) {
+		double soma = 0;
+		for(double alturas : altura) {
+			soma += alturas;
+		}
+		return soma / altura.length;
+	}
+
+}
+
+
+
+   
+                                                              Exceção
+                             
+package aula10;
+
+public class ExceptionHandling {
+
+	public static void main(String[] args) {
+		int d = 0;
+		int a = 10 / d;
+		System.out.println(a);
+	}
+
+}
+
+
+
+                                                             Try catch
+
+package aula10;
+
+import javax.swing.JOptionPane;
+
+public class ExTryCatch1 {
+
+	public static void main(String[] args) {
+		try {
+			int num1 = Integer.parseInt(JOptionPane.showInputDialog("Forneça o valor do primeiro número: "));
+			int num2 = Integer.parseInt(JOptionPane.showInputDialog("Forneça o valor do segundo número: "));
+			
+			JOptionPane.showMessageDialog(null, "Soma = " + (num1 + num2));
+			JOptionPane.showMessageDialog(null, "Subtração = " + (num1 - num2));
+			JOptionPane.showMessageDialog(null, "Multiplicação = " + (num1 * num2));
+			JOptionPane.showMessageDialog(null, "Divisão = " + (num1 / num2));
+		} catch (ArithmeticException erro) {
+			JOptionPane.showMessageDialog(null, "Erro de divisão por 0\n" + erro.toString(), 
+					"Erro", JOptionPane.ERROR_MESSAGE);
+		} catch(NumberFormatException erro) {
+			JOptionPane.showMessageDialog(null, "Erro de conversão\n" + erro.toString(), 
+					"Erro", JOptionPane.ERROR_MESSAGE);
+		} finally {
+			JOptionPane.showMessageDialog(null, "Final da execução");
+		}
+	}
+
+}
+
+
+
+                                                           Estrutura Throw
+
+package aula10;
+
+import javax.swing.JOptionPane;
+
+public class InstrucaoThrows {
+
+	public static void main(String[] args) {
+		try {
+			int idade = Integer.parseInt(JOptionPane.showInputDialog("Forneça sua idade: "));
+			if(idade < 18) {
+				throw new Exception("Menor de idade, entrada não permitida");
+			}
+			
+		} catch (Exception erro) {
+			JOptionPane.showMessageDialog(null, erro.toString()); 
+					
+		}
+       }
+}
+
+
+
+                                                        Checked Exception
+
+package aula10;
+
+import java.io.File;
+import java.io.IOException;
+
+public class CheckedException {
+
+	public static void main(String[] args) {
+		File testeArquivo = new File("C:/Temp/teste.txt");
+		try {
+			testeArquivo.createNewFile();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		System.out.println("testeArquivo existe: " + testeArquivo);
+	}
+
+}
+
+
+ 
+                                                      Criando um objeto
+
+Primeira classe script
+
+package aula10;
+
+public class Automovel {
+	private String cor;
+	private double preco;
+	private String modelo;
+	
+	public Automovel() {
+		System.out.println("Construtor padrão da classe automóvel");
+	}
+	
+	public Automovel(String modelo, double preco) {
+		this.modelo = modelo;
+		this.preco = preco;
+	}
+	
+	public Automovel(String cor, String modelo, double preco) {
+		this.cor = cor;
+		this.modelo = modelo;
+		this.preco = preco;
+	}
+	
+	public String GetCor() {
+		return cor;
+	}
+	
+	public void setCor(String cor) {
+		this.cor = cor;
+		}
+	
+	public double GetPreco() {
+		return preco;
+	}
+	
+	public void setPreco(double preco) {
+		this.preco = preco;
+	}
+	
+	public String GetModelo() {
+		return modelo;
+	}
+	
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+	
+	public void dirigir() {
+		System.out.println("Estou dirigindo um(a) " + modelo);
+	}
+
+
+}
+
+
+Segunda Classe script
+
+package aula10;
+
+public class UsaAutomovel {
+
+	public static void main(String[] args) {
+		//Criando meu primeiro objeto a partir da Classe Automovel
+		Automovel meuAutomovel = new Automovel();
+		meuAutomovel.cor = "Branco";
+		meuAutomovel.preco = 20000.00;
+		meuAutomovel.modelo = "HB20";
+		
+		System.out.println(meuAutomovel.cor);
+		System.out.println(meuAutomovel.preco);
+		System.out.println(meuAutomovel.modelo);
+
+	}
+
+}
+
+Segunda classe com encapsulamento
+
+package aula10;
+
+public class UsaAutomovel {
+
+	public static void main(String[] args) {
+			Automovel carro2 = new Automovel();
+			carro2.setCor("Branco");
+			carro2.setPreco(20000.00);
+			carro2.setModelo("Uno");
+			
+			System.out.println(carro2.GetCor());
+			System.out.println(carro2.GetPreco());
+			System.out.println(carro2.GetModelo());
+	}
+
+}
+
+
+
+                                                    Herança
+Primeira classe script
+
+package aula10;
+
+public class Carro extends Automovel {
+	
+	private int numPortas;
+
+	public int getNumPortas() {
+		return numPortas;
+	}
+
+	public void setNumPortas(int numPortas) {
+		this.numPortas = numPortas;
+	}
+	
+	@Override
+	public void dirigir() {
+	System.out.println("Estou dirigindo um(a) " + GetModelo() + " com " + numPortas + " portas ");
+	}
+}
+
+
+Segunda classe script
+
+package aula10;
+
+public class Moto extends Automovel {
+	
+	private boolean temPartidaEletrica;
+
+	public boolean isTemPartidaEletrica() {
+		return temPartidaEletrica;
+	}
+
+	public void setTemPartidaEletrica(boolean temPartidaEletrica) {
+		this.temPartidaEletrica = temPartidaEletrica;
+	}
+	
+	@Override
+	public void dirigir() {
+		String partidaEletrica = temPartidaEletrica ? "com partida elétrica" : "sem partida elétrica";
+	        System.out.println("Estou pilotando uma moto " + GetModelo() + " " + partidaEletrica);
+	}
+}
+
+
+
+
+
+                                                    Exercício 01
+
+Primeira classe script
+
+package aula10;
+
+public class Pessoa {
+	private String nome;
+	private String nacionalidade;
+	private int idade;
+	
+	public Pessoa() {
+		
+	}
+	
+	public Pessoa(String nome, String nacionalidade, int idade) {
+		this.nome = nome;
+		this.nacionalidade = nacionalidade;
+		this.idade = idade;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getNacionalidade() {
+		return nacionalidade;
+	}
+
+	public void setNacionalidade(String nacionalidade) {
+		this.nacionalidade = nacionalidade;
+	}
+
+	public int getIdade() {
+		return idade;
+	}
+
+	public void setIdade(int idade) {
+		this.idade = idade;
+	}
+	
+	
+
+}
+
+Segunda classe script
+
+package aula10;
+
+public class UsaPessoa {
+
+	public static void main(String[] args) {
+		Pessoa pessoaBr = new Pessoa();
+		
+		pessoaBr.nome = "Henrique";
+		pessoaBr.nacionalidade = "Brasileiro";
+		pessoaBr.idade = 19;
+		
+		System.out.println(pessoaBr.nome);
+		System.out.println(pessoaBr.nacionalidade);
+		System.out.println(pessoaBr.idade);
+		
+		Pessoa pessoaMe = new Pessoa();
+		
+		pessoaMe.nome = "Bolaños";
+		pessoaMe.nacionalidade = "Mexicano";
+		pessoaMe.idade = 30;
+		
+		System.out.println(pessoaMe.nome);
+		System.out.println(pessoaMe.nacionalidade);
+		System.out.println(pessoaMe.idade);
+		
+		Pessoa pessoaUs = new Pessoa("Jeff","Estadunidense", 26);
+		
+		System.out.println(pessoaUs.nome);
+		System.out.println(pessoaUs.nacionalidade);
+		System.out.println(pessoaUs.idade);		
+	}
+
+}
+
+Segunda classe com encapsulamento 
+
+package aula10;
+
+public class UsaPessoa {
+
+	public static void main(String[] args) {
+		Pessoa pessoaBr = new Pessoa();
+		
+		pessoaBr.setNome("Henrique");
+		pessoaBr.setNacionalidade("Brasileiro");
+		pessoaBr.setIdade(19);
+		
+		System.out.println(pessoaBr.getNome());
+		System.out.println(pessoaBr.getNacionalidade());
+		System.out.println(pessoaBr.getIdade());
+		
+		Pessoa pessoaMe = new Pessoa();
+		
+		pessoaMe.setNome("Bolaños");
+		pessoaMe.setNacionalidade("Mexicano");
+		pessoaMe.setIdade(30);
+		
+		System.out.println(pessoaMe.getNome());
+		System.out.println(pessoaMe.getNacionalidade());
+		System.out.println(pessoaMe.getIdade());
+		
+		Pessoa pessoaUs = new Pessoa();
+		
+		pessoaUs.setNome("Jeff");
+		pessoaUs.setNacionalidade("Estadunidense");
+		pessoaUs.setIdade(26);
+		
+		System.out.println(pessoaUs.getNome());
+		System.out.println(pessoaUs.getNacionalidade());
+		System.out.println(pessoaUs.getIdade());
+				
+	}
+
+}
+
+
+Terceira classe script
+
+package aula10;
+
+public class Aluno extends Pessoa{
+	
+	private double numeroMatricula;
+
+	public double getNumeroMatricula() {
+		return numeroMatricula;
+	}
+
+	public void setNumeroMatricula(double numeroMatricula) {
+		this.numeroMatricula = numeroMatricula;
+	}
+}
+
+
+Quarta classe script
+
+package aula10;
+
+public class Colaborador extends Pessoa{
+	
+	private String cargo;
+
+	public String getCargo() {
+		return cargo;
+	}
+
+	public void setCargo(String cargo) {
+		this.cargo = cargo;
+	}
+}
+
+
