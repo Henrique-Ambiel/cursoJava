@@ -17,19 +17,19 @@ O conteúdo está organizado em pastas, separadas pelos dias do curso e pelos te
 
 💻 Tecnologias Utilizadas
 
-Linguagem: Java
+- Linguagem: Java
 
-Ambiente de Desenvolvimento: Eclipse
+- Ambiente de Desenvolvimento: Eclipse
 
 📁 Estrutura do Repositório
 
-/Dia1: Introdução e primeiro exercício.
+- /Dia1: Introdução e primeiro exercício.
 
-/Dia2: Tipo de dados
+- /Dia2: Tipos de dados
 
-/Dia3: Introdução à orientação a objetos e aplicações práticas.
+- /Dia3: Introdução à orientação a objetos e aplicações práticas.
 
-Outras pastas com projetos adicionais e materiais de estudo.
+- Outras pastas com projetos adicionais e materiais de estudo.
 
 🚀 Como Utilizar
 Faça o clone do repositório:
