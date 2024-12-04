@@ -25,7 +25,7 @@ Ambiente de Desenvolvimento: Eclipse
 
 /Dia1: Introdução e primeiro exercício.
 
-/Dia2: Entradas e saídas do console.
+/Dia2: Tipo de dados
 
 /Dia3: Introdução à orientação a objetos e aplicações práticas.
 
