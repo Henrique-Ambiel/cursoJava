@@ -16,13 +16,19 @@ O conteúdo está organizado em pastas, separadas pelos dias do curso e pelos te
 - Aplicações Práticas: Pequenos projetos e exercícios para testar e fixar cada conceito aprendido.
 
 💻 Tecnologias Utilizadas
+
 Linguagem: Java
+
 Ambiente de Desenvolvimento: Eclipse
 
 📁 Estrutura do Repositório
-/Dia1: Introdução e primeiros exercícios.
-/Dia2: Estruturas condicionais e loops.
+
+/Dia1: Introdução e primeiro exercício.
+
+/Dia2: Entradas e saídas do console.
+
 /Dia3: Introdução à orientação a objetos e aplicações práticas.
+
 Outras pastas com projetos adicionais e materiais de estudo.
 
 🚀 Como Utilizar
