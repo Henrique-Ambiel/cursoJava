@@ -37,9 +37,9 @@ Faça o clone do repositório:
 
 - git clone https://github.com/seu-usuario/seu-repositorio.git
   
-- Abra os arquivos no Eclipse.
+Abra os arquivos no Eclipse.
   
-- Explore cada pasta e execute os códigos para compreender os conceitos abordados.
+Explore cada pasta e execute os códigos para compreender os conceitos abordados.
 
 🎯 Objetivo
 
