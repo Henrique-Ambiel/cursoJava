@@ -32,12 +32,15 @@ O conteúdo está organizado em pastas, separadas pelos dias do curso e pelos te
 - Outras pastas com projetos adicionais e materiais de estudo.
 
 🚀 Como Utilizar
+
 Faça o clone do repositório:
-bash
-Copiar código
-git clone https://github.com/seu-usuario/seu-repositorio.git  
-Abra os arquivos no Eclipse.
-Explore cada pasta e execute os códigos para compreender os conceitos abordados.
+
+- git clone https://github.com/seu-usuario/seu-repositorio.git
+  
+- Abra os arquivos no Eclipse.
+  
+- Explore cada pasta e execute os códigos para compreender os conceitos abordados.
 
 🎯 Objetivo
+
 Este repositório foi criado para consolidar o aprendizado sobre Java, com foco nos fundamentos da linguagem e sua aplicação prática em problemas simples e intermediários.
