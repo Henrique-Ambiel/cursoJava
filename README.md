@@ -35,7 +35,7 @@ O conteúdo está organizado em pastas, separadas pelos dias do curso e pelos te
 
 Faça o clone do repositório:
 
-- git clone https://github.com/seu-usuario/seu-repositorio.git
+- git clone https://github.com/Henrique-Ambiel/cursoJava.git
   
 Abra os arquivos no Eclipse.
   
