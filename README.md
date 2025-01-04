@@ -1,8 +1,8 @@
-Curso de Java - SENAI ☕📚
+# Curso de Java - SENAI ☕📚
 
 Este repositório contém os projetos desenvolvidos durante o curso de Java realizado no SENAI. O objetivo foi aprender os fundamentos da linguagem Java, explorando conceitos básicos e práticas iniciais de programação.
 
-📋 Conteúdo do Repositório
+## 📋 Conteúdo do Repositório
 O conteúdo está organizado em pastas, separadas pelos dias do curso e pelos temas abordados:
 
 - Conceitos e Sintaxe Básica: Introdução à linguagem Java e estrutura de um programa simples.
@@ -15,13 +15,13 @@ O conteúdo está organizado em pastas, separadas pelos dias do curso e pelos te
   
 - Aplicações Práticas: Pequenos projetos e exercícios para testar e fixar cada conceito aprendido.
 
-💻 Tecnologias Utilizadas
+## 💻 Tecnologias Utilizadas
 
 - Linguagem: Java
 
 - Ambiente de Desenvolvimento: Eclipse
 
-📁 Estrutura do Repositório
+## 📁 Estrutura do Repositório
 
 - /Dia1: Introdução e primeiro exercício.
 
@@ -31,16 +31,16 @@ O conteúdo está organizado em pastas, separadas pelos dias do curso e pelos te
 
 - Outras pastas com projetos adicionais e materiais de estudo.
 
-🚀 Como Utilizar
+## 🚀 Como Utilizar
 
 Faça o clone do repositório:
 
 - git clone https://github.com/Henrique-Ambiel/cursoJava.git
   
-Abra os arquivos no Eclipse.
+- Abra os arquivos no Eclipse.
   
-Explore cada pasta e execute os códigos para compreender os conceitos abordados.
+- Explore cada pasta e execute os códigos para compreender os conceitos abordados.
 
-🎯 Objetivo
+## 🎯 Objetivo
 
 Este repositório foi criado para consolidar o aprendizado sobre Java, com foco nos fundamentos da linguagem e sua aplicação prática em problemas simples e intermediários.
