@@ -21,26 +21,6 @@ O conteúdo está organizado em pastas, separadas pelos dias do curso e pelos te
 
 - Ambiente de Desenvolvimento: Eclipse
 
-## 📁 Estrutura do Repositório
-
-- /Dia1: Introdução e primeiro exercício.
-
-- /Dia2: Tipos de dados
-
-- /Dia3: Introdução à orientação a objetos e aplicações práticas.
-
-- Outras pastas com projetos adicionais e materiais de estudo.
-
-## 🚀 Como Utilizar
-
-Faça o clone do repositório:
-
-- git clone https://github.com/Henrique-Ambiel/cursoJava.git
-  
-- Abra os arquivos no Eclipse.
-  
-- Explore cada pasta e execute os códigos para compreender os conceitos abordados.
-
 ## 🎯 Objetivo
 
 Este repositório foi criado para consolidar o aprendizado sobre Java, com foco nos fundamentos da linguagem e sua aplicação prática em problemas simples e intermediários.
